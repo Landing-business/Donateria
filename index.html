@@ -165,7 +165,7 @@
         <p class="footer-attention">Изображение пончиков может незначительно отличаться от готового продукта. Изображения в блоке с пиццами не являются изображением продукта.</p>
         <a href="./admin.html" class="footer-admin">Админ панель</a>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
 window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
@@ -177,22 +177,32 @@ function set(id, value) {
   const el = document.getElementById(id);
   if (el && value !== undefined) el.textContent = value;
 }
-function loadPrices() {
-const saved = JSON.parse(localStorage.getItem("menuPrices")) || {};
-set("margarita", saved.margarita);
-set("peperoni", saved.peperoni);
-set("gavaiskaia", saved.gavaiskaia);
-set("miasnaya", saved.meat);
-set("kaprichoza", saved.kaprichoza);
-set("apetitnaia", saved.apetitnaia);
-set("donut-posipka", saved.posipka);
-set("donut-marmelade", saved.marmelade);
-set("koktail1", saved.blueberrie);
-set("koktail2", saved.malina);
+
+axios.get('./costs.json')
+  .then(response => {
+    const saved = response.data;
+    console.log(saved);
+  })
+  .catch(error => {
+    console.error("Ошибка загрузки:", error);
+  });
+async function loadPrices() {
+const response = await fetch('./scripts/costs.json');
+const saved = await response.json();
+
+set("margarita", saved.menu[0].price);
+set("peperoni", saved.menu[1].price);
+set("gavaiskaia", saved.menu[2].price);
+set("miasnaya", saved.menu[3].price);
+set("kaprichoza", saved.menu[4].price);
+set("apetitnaia", saved.menu[5].price);
+set("donut-posipka", saved.menu[6].price);
+set("donut-marmelade", saved.menu[7].price);
+set("koktail1", saved.menu[8].price);
+set("koktail2", saved.menu[9].price);
 }
 loadPrices()
-    </script>
-    <script src="./scripts/dishes-select.js"></script>
+</script>
+<script src="./scripts/dishes-select.js"></script>
 </body>
 </html>
-
