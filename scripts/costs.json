@@ -1,0 +1,15 @@
+{
+  "menu": [
+    { "name": "margarita", "price": "10"},
+    { "name": "peperoni", "price": "12"},
+    { "name": "gavaiskaia", "price": "14"},
+    { "name": "meat", "price": "14"},
+    { "name": "kaprichoza", "price": "14"},
+    { "name": "apetitnaia", "price": "14.5"},
+    { "name": "posipka", "price": "2,5"},
+    { "name": "marmelade", "price": "2,5"},
+    { "name": "blueberrie", "price": "5"},
+    { "name": "malina", "price": "5"}
+  ]
+  
+}
