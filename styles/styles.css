@@ -218,7 +218,6 @@ main{
 .menu-dishes{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     column-gap: 35px;
     row-gap: 35px;
 }
@@ -402,5 +401,6 @@ iframe{
     }
     
 }
+
 
 
