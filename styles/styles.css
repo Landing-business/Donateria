@@ -105,7 +105,7 @@ main{
     column-gap: 10px;
 
     padding-block: 50px;
-    margin-bottom: 200px;
+    margin-bottom: 75px;
 }
 
 .first-section-text-header{
@@ -199,7 +199,7 @@ main{
     padding-block: 5px;
 
     margin-top: 15px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 .menu-header-form{
@@ -218,7 +218,6 @@ main{
 .menu-dishes{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     column-gap: 35px;
     row-gap: 35px;
 }
@@ -406,6 +405,7 @@ iframe{
     }
     
 }
+
 
 
 
