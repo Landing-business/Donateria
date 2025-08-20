@@ -218,6 +218,7 @@ main{
 .menu-dishes{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     column-gap: 35px;
     row-gap: 35px;
 }
@@ -330,6 +331,10 @@ iframe{
     .first-section-text {
         order: 2;
     }
+    .donut-image{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 660px){
@@ -401,6 +406,5 @@ iframe{
     }
     
 }
-
 
 
