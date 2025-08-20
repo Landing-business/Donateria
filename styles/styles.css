@@ -224,7 +224,7 @@ main{
 }
 
 .menu-dishes-dish{
-    max-width: 620px;
+    max-width: 550px;
     background-color: var(--color-broun);
     border-radius: 50px;
 
@@ -406,5 +406,6 @@ iframe{
     }
     
 }
+
 
 
