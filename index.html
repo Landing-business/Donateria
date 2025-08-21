@@ -99,7 +99,7 @@
                 <div class="menu-dishes-dish">
                     <img src="./dishes/pizzas/apetitnaia.png" class="menu-dishes-dish-image">
                     <div class="menu-dishes-dish-text">
-                    <h4 class="menu-dishes-dish-header">Апетитная</h4>
+                    <h4 class="menu-dishes-dish-header">Аппетитная</h4>
                     <div class="menu-dish-mass">500 гр</div>
                     <p class="menu-dishes-dish-title">Томатный соус, сыр моцарелла, салями, куриное филе, шампиьньоны, перец сладкий, маслины, масло чесночное</p>
                     <div class="menu-dishes-dish-prise"><div class="bold-prise" id="apetitnaia">14,5</div> руб</div>
@@ -165,8 +165,61 @@
         <p class="footer-attention">Изображение пончиков может незначительно отличаться от готового продукта. Изображения в блоке с пиццами не являются изображением продукта.</p>
         <a href="./admin.html" class="footer-admin">Админ панель</a>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDbGl-KrsQquB5NuT67Tycx8-CcbwTzq5c",
+  authDomain: "donateria-e9363.firebaseapp.com",
+  projectId: "donateria-e9363",
+  storageBucket: "donateria-e9363.firebasestorage.app",
+  messagingSenderId: "581628783077",
+  appId: "1:581628783077:web:ce11d7ec9b95c578fe670c",
+  measurementId: "G-1H8C2028Z4"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
+
+
+async function getPrices() {
+  try {
+    const docRef = doc(db, "menu", "prices");
+    const docSnap = await getDoc(docRef);
+    const data = docSnap.data();
+    // пиццы
+    set("margarita", data["Маргарита"]);
+    set("gavaiskaia", data["Гавайская"]);
+    set("miasnaya", data["Мясная"]);
+    set("kaprichoza", data["Капричоза"]);
+    set("peperoni", data["Пеперони"]);
+    set("apetitnaia", data["Аппетитная"]);
+    // пончики
+    set("donut-posipka", data["Пончик с посыпкой"]);
+    set("donut-marmelade", data["Пончик с мармеладом"]);
+    // коктейти
+    set("koktail1", data["Коктейль виноградный"]);
+    set("koktail2", data["Коктейль клубничный"]);
+    return data;
+    
+  } catch (err) {
+    console.error("Ошибка загрузки:", err);
+    return null;
+  }
+}
+function set(id, value){
+    const el = document.getElementById(id);
+    el.textContent = value;
+}
+
+// получение цен
+getPrices()
+</script>
     <script>
+// прелоудер
 window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
   preloader.style.opacity = '0';
@@ -178,30 +231,6 @@ function set(id, value) {
   if (el && value !== undefined) el.textContent = value;
 }
 
-axios.get('./costs.json')
-  .then(response => {
-    const saved = response.data;
-    console.log(saved);
-  })
-  .catch(error => {
-    console.error("Ошибка загрузки:", error);
-  });
-async function loadPrices() {
-const response = await fetch('./scripts/costs.json');
-const saved = await response.json();
-
-set("margarita", saved.menu[0].price);
-set("peperoni", saved.menu[1].price);
-set("gavaiskaia", saved.menu[2].price);
-set("miasnaya", saved.menu[3].price);
-set("kaprichoza", saved.menu[4].price);
-set("apetitnaia", saved.menu[5].price);
-set("donut-posipka", saved.menu[6].price);
-set("donut-marmelade", saved.menu[7].price);
-set("koktail1", saved.menu[8].price);
-set("koktail2", saved.menu[9].price);
-}
-loadPrices()
 </script>
 <script src="./scripts/dishes-select.js"></script>
 </body>
