@@ -193,9 +193,9 @@ main{
     border-radius: 15px;
 
     font-weight: 700;
-    font-size: 45px;
+    font-size: 35px;
 
-    padding-inline: 40px;
+    padding-inline: 20px;
     padding-block: 5px;
 
     margin-top: 15px;
@@ -405,6 +405,7 @@ iframe{
     }
     
 }
+
 
 
 
