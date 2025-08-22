@@ -1,1 +1,62 @@
-Generated sitemap.xml will appear here...
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Главная страница -->
+  <url>
+    <loc>https://landing-business.github.io/Donateria/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Категория: Пиццы -->
+  <url>
+    <loc>https://landing-business.github.io/Donateria/dishes/pizzas/margarita.png</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://landing-business.github.io/Donateria/dishes/pizzas/peperoni.png</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://landing-business.github.io/Donateria/dishes/pizzas/gavaiskaia.png</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://landing-business.github.io/Donateria/dishes/pizzas/miasnaya.png</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://landing-business.github.io/Donateria/dishes/pizzas/kaprichoza.png</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://landing-business.github.io/Donateria/dishes/pizzas/apetitnaia.png</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Категория: Пончики -->
+  <url>
+    <loc>https://landing-business.github.io/Donateria/dishes/donuts/donut1.png</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://landing-business.github.io/Donateria/dishes/donuts/image%2025.png</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Категория: Напитки -->
+  <url>
+    <loc>https://landing-business.github.io/Donateria/dishes/drinks/image%2029.png</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://landing-business.github.io/Donateria/dishes/drinks/image%2030.png</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Внешняя ссылка на Instagram -->
+  <url>
+    <loc>https://www.instagram.com/donats_kostjukovichi/</loc>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
