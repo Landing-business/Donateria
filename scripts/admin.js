@@ -12,7 +12,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyDbGl-KrsQquB5NuT67Tycx8-CcbwTzq5c",
   authDomain: "donateria-e9363.firebaseapp.com",
   projectId: "donateria-e9363",
-  storageBucket: "donateria-e9363.appspot.com",
+  storageBucket: "donateria-e9363.firebasestorage.app",
   messagingSenderId: "581628783077",
   appId: "1:581628783077:web:ce11d7ec9b95c578fe670c",
   measurementId: "G-1H8C2028Z4"
@@ -121,3 +121,4 @@ function get(id) {
   const el = document.getElementById(id);
   return el ? el.value.trim() : "";
 }
+
