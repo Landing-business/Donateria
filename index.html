@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Донатерия | Бар</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./logo.png">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./logo.png" alt="Донатерия" width="65">
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Главная</a></li>
+                <li><a href="#menu" class="nav-link">Меню</a></li>
+                <li><a href="#contact" class="nav-link">Заказать</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Главный баннер -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Готовим только<span class="highlight"> самые вкусные пончики!</span></h1>
+                <p class="hero-subtitle">Только натуральные и свежие продукты.</p>
+                
+                
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fab fa-telegram"></i> Заказать в Telegram
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i> Позвонить нам
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+        </div>
+    </section>
+
+    <!-- Меню -->
+    <section class="section menu" id="menu">
+        <div class="container">
+            <h2 class="section-title">Наше меню</h2>       
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="donuts">Пончики</button>
+                <button class="menu-tab" data-category="pizza">Пиццы</button>
+                <button class="menu-tab" data-category="drinks">Напитки</button>
+            </div>
+            
+            <div class="menu-items" id="menuItems">
+                <div class="menu-loading">
+                    <div class="spinner"></div>
+                    <p style="margin-top: 20px;">Загружаем меню...</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; color: var(--gray); font-size: 0.9rem; margin-top: 30px;">
+                <p><i class="fas fa-sync-alt" style="margin-right: 8px;"></i> Цены обновляются автоматически. Последнее обновление: <span id="lastUpdate">сегодня</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Как сделать заказ</h2>
+                    <p>Мы работаем ежедневно с 10:00 до 22:00. Заказы принимаются через Telegram-бота или по телефону. Доставка по городу в течение 60 минут.</p>
+                    
+                    <div class="contact-details">
+                        
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Часы работы</h3>
+                                <p>Ежедневно 10:00 - 22:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-buttons">
+                    <h3 style="margin-bottom: 20px; color: var(--dark);">Выберите способ заказа</h3>
+                    
+                    <a href="https://t.me/Donateria_bot" class="contact-button telegram" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <div style="font-weight: 700; font-size: 1.1rem;">Telegram-бот</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">Быстрый заказ через бота</div>
+                        </div>
+                    </a>
+                    
+                    <a href="tel:+37522222" class="contact-button phone">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <div style="font-weight: 700; font-size: 1.1rem;">Позвонить</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">Консультация и заказ по телефону</div>
+                        </div>
+                    </a>
+                    
+                    <p style="color: var(--gray); font-size: 0.9rem; margin-top: 20px;">
+                        <i class="fas fa-info-circle" style="margin-right: 8px;"></i> На сайте заказ невозможен. Выберите один из способов выше.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span style="margin-right: 10px;"><img src="./logo.png" alt="Донатерия" width="65"></span> Донатерия
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/donats_kostjukovichi/" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        
+                        <a href="https://t.me/Donateria_bot" class="social-link">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Меню</h3>
+                    <ul class="footer-links">
+                        <li><a href="#menu" data-category="donuts">Пончики</a></li>
+                        <li><a href="#menu" data-category="pizza">Пицца</a></li>
+                        <li><a href="#menu" data-category="drinks">Напитки</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Контакты</h3>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Заказать через Telegram</a></li>
+                        <li><a href="#contact">Адрес и часы работы</a></li>
+                        <li><a href="#contact">Доставка</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© Донатерия</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">Изображения могут отличаться от итогового вида товара</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
