@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /admin/
-Sitemap: https://landing-business.github.io/Donateria/SiteMap.xml
