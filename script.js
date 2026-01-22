@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Инициализация
     fetchGoogleSheetData();
-
-    // получение цен
+    News_getter();
+    // получение цен и новостей
     async function fetchGoogleSheetData() {
     try {
         const sheet_id = "1OOSgWA91opl6d-jngyKBSuJ7P0pTxd8Wk5z-_JyZavI"
@@ -48,6 +48,25 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Error fetching Google Sheets data:', error);
     }
 }
+
+    // получение и отоброжение новостей
+    async function News_getter() {
+        const sheet_id = "1OOSgWA91opl6d-jngyKBSuJ7P0pTxd8Wk5z-_JyZavI"
+        const api_key = "AIzaSyDuucqwu0PfduoNoXGgYPkMAAMi3X2uDVA"
+
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheet_id}/values/Новости?key=${api_key}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        const rows = data.values;
+
+        console.log(rows);
+        let news_container = document.getElementById("news-container");
+        
+        if (rows.length){
+        for(let i = 1; i < rows.length; i++){
+            news_container.innerHTML += `<p>${rows[i][0]}</p>`
+        }}
+    }
 
     // Функции
     function initNav() {
